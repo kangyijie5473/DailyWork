@@ -1,0 +1,18 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUF_SIZE	recmsg.c	14;"	d	file:
+BUF_SIZE	sendmsg.c	13;"	d	file:
+PATH_NAME	recmsg.c	16;"	d	file:
+PATH_NAME	sendmsg.c	15;"	d	file:
+PROJ_ID	recmsg.c	15;"	d	file:
+PROJ_ID	sendmsg.c	14;"	d	file:
+env	wrong_return.c	/^jmp_buf  env;$/;"	v
+handler_signalmin15	wrong_return.c	/^void handler_signalmin15(int signo)$/;"	f
+handler_sigrtmax15	wrong_return.c	/^void handler_sigrtmax15(int signo)$/;"	f
+main	recmsg.c	/^int main(void)$/;"	f
+main	sendmsg.c	/^int main(void)$/;"	f
+main	wrong_return.c	/^int main(void)$/;"	f
