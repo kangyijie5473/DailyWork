@@ -21,7 +21,6 @@ void mul(node *pHeadA, node *pHeadB)
     node *pA;
     pA = pHeadA -> next;
     while(pA){
-
         pB = pHeadB -> next;
         while(pB){
             if(pB -> element == pA -> element){
@@ -169,3 +168,10 @@ int main(void)
     operation[choice -1](pHeadA,pHeadB);
     return 0;
 }
+
+
+
+
+
+
+
