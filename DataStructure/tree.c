@@ -16,8 +16,7 @@ typedef struct Node{
     struct Node *rightChild;
 }node;
 
-typedef struct  StackNode
-{
+typedef struct  StackNode{
 	node treeNode;
 	struct  StackNode *next;
 }stackNode;
@@ -133,21 +132,55 @@ void printTree(node *root,int h)
     printf("%c\n",root->data);
     printTree(root->leftChild,h+1);
 }
+node *anotherCreatTree(node *root, char a[], char b[], int len)
+{
+    if(len <= 0){
+        return root = NULL;
+    }else{
+        char *temp = NULL;
+        int k = 0;
+        root = (node *)malloc(sizeof(node));
+        root->data = *a;
+        for(temp = b; *temp != *a; temp++){
+            k++;
+        }
+        root->leftChild = anotherCreatTree(root->leftChild, a+1, b, k);
+        root->rightChild = anotherCreatTree(root->rightChild, a+1+k, temp+1, len-1-k);
+        return root;
+    }
 
+}
 int main(void)
 {
     node root;
     node *Root;
+    
     char a[20];
-    scanf("%s",a);
+    scanf("%s",a); // put in pre list
     ch = &a[0];
-    createTree(&root);
-    printTree(&root, 1);
-    prePrint(&root);
+
+    createTree(&root); // creat tree
+
+    printTree(&root, 1); // print tree 
+
+    prePrint(&root); // pre traversal print
     printf("\n");
-    midPrint(&root);
+
+    midPrint(&root); // mid traversal print
     printf("\n");
-    lastPrint(&root);
+
+    lastPrint(&root);// last traversal print
     printf("\n\n");
-    funMidPrint(&root);
+    
+    funMidPrint(&root); // not recursion print
+
+    
+    char b[64];
+    char c[64];
+    node *anotherRoot = NULL;
+    scanf("%s",b);
+    scanf("%s",c);
+    anotherRoot = anotherCreatTree(anotherRoot, b, c, strlen(b));
+    printTree(anotherRoot,1);
+    
 }
