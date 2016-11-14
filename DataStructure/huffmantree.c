@@ -58,6 +58,27 @@ void reverseCode(char huffmanCode[], int pos)
         t--;
     }
 }
+void getChar(char objCode[], char resultChar[],int n)
+{
+	int i = n;
+	char *p = &objCode[0];
+	char *q = &resultChar[0];
+	while(*p != '\0'){
+		while(huffmantree[i].leftChild != 0 || huffmantree[i].rightChild != 0){
+			if(*p == '0'){
+				i = huffmantree[i].leftChild;
+				p++;
+			}else{
+				i = huffmantree[i].rightChild;
+				p++;
+			}
+		}
+		*q = character[i];
+		q++;
+		i = n;
+	}
+	*q = '\0';
+}
 void getCode(int i, char huffmanCode[])
 {
     int pos = 0;
@@ -73,8 +94,6 @@ void getCode(int i, char huffmanCode[])
     }
     huffmanCode[pos] = '\0';
     reverseCode(huffmanCode,pos-1);
-
-
 }
 void getKey(int *key, int i)
 {
@@ -129,16 +148,32 @@ void creatHuffmanTree(int weight[], int n)
 }
 int main(void)
 {
+	int choice;
 	int n;
 	int weight[200];
+	char resultChar[20];
+	char objCode[100];
+	printf("请输入字符集个数\n");
 	scanf("%d",&n);
+	
 	character = (char *)malloc(sizeof(char) * (n+2));
+	printf("请输入字符集\n");
 	scanf("%s",character+1);
+	
 	int i;
+	printf("请输入权值\n");
 	for(i = 1; i <= n; i++){
 		scanf("%d",&weight[i]);
 	}
 	creatHuffmanTree(weight, n);
-    //scanf("%s",objCharacter);
-    printCode(n,ALL);
+	printCode(n,ALL);
+	
+	printf("输入要编码的字符串\n");
+	scanf("%s",objCharacter);
+	printCode(n,0);
+	
+	printf("输入要解码的字符串\n"); 
+	scanf("%s",objCode);
+	getChar(objCode, resultChar, 2*n-1); 
+	printf("result -> %s\n",resultChar); 
 }
