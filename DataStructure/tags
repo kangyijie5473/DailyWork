@@ -1,0 +1,208 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALL	huffmantree.c	5;"	d	file:
+CODE	code1.h	12;"	d
+DIFF	set.c	11;"	d	file:
+FALSE	code1.h	11;"	d
+Huffmantree	huffmantree.c	/^}Huffmantree;$/;"	t	typeref:struct:__anon2	file:
+JIEMA	code1.h	13;"	d
+MAX	horse.c	4;"	d	file:
+MAXLEN	b.c	10;"	d	file:
+MAXLEN	code1.h	14;"	d
+MAXLEN	graph.c	10;"	d	file:
+MAXLEN	康艺杰_12/graph.c	10;"	d	file:
+MIN	horse.c	5;"	d	file:
+N	huffmantree.c	4;"	d	file:
+Node	666.c	/^typedef struct Node{$/;"	s	file:
+Node	b.c	/^typedef struct Node{$/;"	s	file:
+Node	creattree.c	/^typedef struct Node{$/;"	s	file:
+Node	graph.c	/^typedef struct Node{$/;"	s	file:
+Node	horse.c	/^typedef struct  Node$/;"	s	file:
+Node	set.c	/^typedef struct Node{$/;"	s	file:
+Node	tree.c	/^typedef struct Node{$/;"	s	file:
+Node	yuesefu.c	/^typedef struct Node {$/;"	s	file:
+Node	康艺杰_12/graph.c	/^typedef struct Node{$/;"	s	file:
+Pre	666.c	/^node *Pre;$/;"	v
+SAME	set.c	10;"	d	file:
+StackNode	tree.c	/^typedef struct  StackNode{$/;"	s	file:
+TRUE	code1.h	10;"	d
+_CODE1_H	code1.h	9;"	d
+add	set.c	/^void add(node *pHeadA, node *pHeadB)$/;"	f
+add	triple.c	/^void add()$/;"	f
+anotherCreatTree	creattree.c	/^node *anotherCreatTree(node *root, char a[], char b[], int len)$/;"	f
+anotherCreatTree	tree.c	/^node *anotherCreatTree(node *root, char a[], char b[], int len)$/;"	f
+bfs	b.c	/^void bfs(void)$/;"	f
+bfs	graph.c	/^void bfs(void)$/;"	f
+bfs	康艺杰_12/graph.c	/^void bfs(void)$/;"	f
+ch	tree.c	/^char *ch;$/;"	v
+character	huffmantree.c	/^char *character;$/;"	v
+chooseFile	code1.c	/^FILE *chooseFile(int flag)$/;"	f
+codeBuffer	code1.h	/^char *codeBuffer;$/;"	v
+codeToBuffer	code1.c	/^void codeToBuffer(FILE *fp)$/;"	f
+compressChar	HuffmanCoder.c	/^void compressChar(char buffer[], int count)$/;"	f
+compressFile	code1.h	/^char compressFile[MAXLEN];$/;"	v
+compressfp	code1.h	/^FILE *compressfp;$/;"	v
+count	horse.c	/^int count = 1;$/;"	v
+count	tree.c	/^int count;$/;"	v
+creat	set.c	/^node *creat(void)$/;"	f
+creatHuffmanTree	huffmantree.c	/^void creatHuffmanTree(int weight[], int n)$/;"	f
+creatTree	code1.c	/^int creatTree()$/;"	f
+create	yuesefu.c	/^node *create(int n)$/;"	f
+createTree	tree.c	/^node *createTree(node *root)$/;"	f
+ctoi	HuffmanCoder.c	/^unsigned char ctoi(char buffer[])$/;"	f
+data	666.c	/^    char data;$/;"	m	struct:Node	file:
+data	creattree.c	/^    char data;$/;"	m	struct:Node	file:
+data	tree.c	/^    char data;$/;"	m	struct:Node	file:
+data	yuesefu.c	/^    int data;$/;"	m	struct:Node	file:
+deCpsFp	HuffmanCoder.c	/^FILE *deCpsFp;$/;"	v
+decompress	HuffmanCoder.c	/^void decompress()$/;"	f
+dfs	b.c	/^void dfs(void)$/;"	f
+dfs	graph.c	/^void dfs(void)$/;"	f
+dfs	康艺杰_12/graph.c	/^void dfs(void)$/;"	f
+effectiveChar	code1.h	/^int effectiveChar;$/;"	v
+element	b.c	/^    int element;$/;"	m	struct:Node	file:
+element	graph.c	/^    int element;$/;"	m	struct:Node	file:
+element	set.c	/^    char element;$/;"	m	struct:Node	file:
+element	康艺杰_12/graph.c	/^    int element;$/;"	m	struct:Node	file:
+fileToBuffer	HuffmanCoder.c	/^int fileToBuffer()$/;"	f
+findMinWeight	code1.c	/^void findMinWeight(int n, int *node1, int  *node2)$/;"	f
+findMinWeight	huffmantree.c	/^void findMinWeight(int n, int *node1, int *node2)$/;"	f
+findRoot	666.c	/^node *findRoot(node *ptemp, char preChar)$/;"	f
+flag	666.c	/^    int flag;$/;"	m	struct:Node	file:
+flag	set.c	/^    int flag;$/;"	m	struct:Node	file:
+fun	666.c	/^void fun(node *preHead, node *midHead)$/;"	f
+fun	horse.c	/^void fun(int i, int j)$/;"	f
+funMidPrint	tree.c	/^void funMidPrint(node *root)$/;"	f
+getChar	HuffmanCoder.c	/^void getChar()$/;"	f
+getChar	huffmantree.c	/^void getChar(char objCode[], char resultChar[],int n)$/;"	f
+getCode	code1.c	/^void getCode(unsigned char key, char huffmanCode[])$/;"	f
+getCode	huffmantree.c	/^void getCode(int i, char huffmanCode[])$/;"	f
+getInOut	b.c	/^void getInOut(void)$/;"	f
+getInOut	graph.c	/^void getInOut(void)$/;"	f
+getInOut	康艺杰_12/graph.c	/^void getInOut(void)$/;"	f
+getKey	huffmantree.c	/^void getKey(int *key, int i)$/;"	f
+getWeight	code1.c	/^int getWeight(FILE *fp)$/;"	f
+getlist	b.c	/^void getlist(void)$/;"	f
+getlist	graph.c	/^void getlist(void)$/;"	f
+getlist	康艺杰_12/graph.c	/^void getlist(void)$/;"	f
+head	horse.c	/^node head;$/;"	v
+head	tree.c	/^stackNode head;$/;"	v
+huffmantree	huffmantree.c	/^Huffmantree huffmantree[N];$/;"	v
+i	horse.c	/^	int i;$/;"	m	struct:Node	file:
+init	b.c	/^void init(void)$/;"	f
+init	graph.c	/^void init(void)$/;"	f
+init	康艺杰_12/graph.c	/^void init(void)$/;"	f
+init1	triple.c	/^void init1()$/;"	f
+init2	triple.c	/^void init2()$/;"	f
+initTree	666.c	/^node  *initTree(void)$/;"	f
+itoc	HuffmanCoder.c	/^void itoc(unsigned char key,char buffer[])$/;"	f
+j	horse.c	/^	int j;$/;"	m	struct:Node	file:
+judge	666.c	/^int judge(node *midTemp, node *preTemp)$/;"	f
+judgeEmpty	tree.c	/^int judgeEmpty(void){$/;"	f
+lastPrint	tree.c	/^void lastPrint(node *root)$/;"	f
+leftChild	code1.h	/^    int leftChild;$/;"	m	struct:__anon1
+leftChild	creattree.c	/^    struct Node *leftChild;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+leftChild	huffmantree.c	/^	int leftChild;$/;"	m	struct:__anon2	file:
+leftChild	tree.c	/^    struct Node *leftChild;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+list	b.c	/^node list[MAXLEN];$/;"	v
+list	graph.c	/^node list[MAXLEN];$/;"	v
+list	康艺杰_12/graph.c	/^node list[MAXLEN];$/;"	v
+main	666.c	/^int main(void)$/;"	f
+main	HuffmanCoder.c	/^int main(void)$/;"	f
+main	b.c	/^int main(void)$/;"	f
+main	creattree.c	/^int main(void)$/;"	f
+main	graph.c	/^int main(void)$/;"	f
+main	hello.c	/^int main(void)$/;"	f
+main	horse.c	/^int main(void)$/;"	f
+main	huffmantree.c	/^int main(void)$/;"	f
+main	set.c	/^int main(void)$/;"	f
+main	testc.c	/^int main(void)$/;"	f
+main	tree.c	/^int main(void)$/;"	f
+main	triple.c	/^int main(void)$/;"	f
+main	yuesefu.c	/^int main(void)$/;"	f
+main	康艺杰_12/graph.c	/^int main(void)$/;"	f
+map	horse.c	/^int map[8][8];$/;"	v
+map1	triple.c	/^int map1 [100][100];$/;"	v
+martrix	b.c	/^int martrix[MAXLEN][MAXLEN] = {0,0,0,0,0,0,$/;"	v
+matrix	graph.c	/^int matrix[MAXLEN][MAXLEN] = {0,0,0,0,0,0,$/;"	v
+matrix	康艺杰_12/graph.c	/^int matrix[MAXLEN][MAXLEN] = {0,0,0,0,0,0,$/;"	v
+midPrint	tree.c	/^void midPrint(node *root)$/;"	f
+mul	set.c	/^void mul(node *pHeadA, node *pHeadB)$/;"	f
+next	666.c	/^    struct Node *next;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+next	b.c	/^    struct Node* next;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+next	graph.c	/^    struct Node* next;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+next	horse.c	/^	struct Node *next;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+next	set.c	/^    struct Node *next;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+next	tree.c	/^	struct  StackNode *next;$/;"	m	struct:StackNode	typeref:struct:StackNode::StackNode	file:
+next	yuesefu.c	/^    struct Node *next;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+next	康艺杰_12/graph.c	/^    struct Node* next;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+node	666.c	/^}node;$/;"	t	typeref:struct:Node	file:
+node	b.c	/^}node;$/;"	t	typeref:struct:Node	file:
+node	code1.h	/^}node;$/;"	t	typeref:struct:__anon1
+node	creattree.c	/^}node;$/;"	t	typeref:struct:Node	file:
+node	graph.c	/^}node;$/;"	t	typeref:struct:Node	file:
+node	horse.c	/^}node;$/;"	t	typeref:struct:Node	file:
+node	set.c	/^}node;$/;"	t	typeref:struct:Node	file:
+node	tree.c	/^}node;$/;"	t	typeref:struct:Node	file:
+node	yuesefu.c	/^}node;$/;"	t	typeref:struct:Node	file:
+node	康艺杰_12/graph.c	/^}node;$/;"	t	typeref:struct:Node	file:
+objCharacter	huffmantree.c	/^char objCharacter[20];$/;"	v
+operation	set.c	/^void (*operation[])(node *pHeadA, node *pHeadB) = {sub, add, mul};$/;"	v
+out	yuesefu.c	/^void out(node *phead,int m)$/;"	f
+parent	code1.h	/^    int parent;$/;"	m	struct:__anon1
+parent	huffmantree.c	/^	int parent;$/;"	m	struct:__anon2	file:
+pop	b.c	/^node *pop(void)$/;"	f
+pop	graph.c	/^node *pop(void)$/;"	f
+pop	tree.c	/^node* pop(void)$/;"	f
+pop	康艺杰_12/graph.c	/^node *pop(void)$/;"	f
+popStack	horse.c	/^void popStack(void)$/;"	f
+pos	triple.c	/^int triple3[200],pos=1,sum3;$/;"	v
+prePrint	tree.c	/^void prePrint(node *root)$/;"	f
+print	code1.c	/^void print()$/;"	f
+print	huffmantree.c	/^void print(int n)$/;"	f
+print	set.c	/^void print(node *pHeadA){$/;"	f
+print	yuesefu.c	/^void print(node *phead)$/;"	f
+printCode	huffmantree.c	/^void printCode(int n, int flag)$/;"	f
+printTree	creattree.c	/^void printTree(node *root,int h)$/;"	f
+printTree	tree.c	/^void printTree(node *root,int h)$/;"	f
+push	b.c	/^void push(node *temp)$/;"	f
+push	graph.c	/^void push(node *temp)$/;"	f
+push	tree.c	/^void push(node *p)$/;"	f
+push	康艺杰_12/graph.c	/^void push(node *temp)$/;"	f
+pushStack	horse.c	/^void pushStack(int i, int j)$/;"	f
+reverseCode	code1.c	/^void reverseCode(char huffmanCode[], int pos)$/;"	f
+reverseCode	huffmantree.c	/^void reverseCode(char huffmanCode[], int pos)$/;"	f
+rightChild	code1.h	/^    int rightChild;$/;"	m	struct:__anon1
+rightChild	creattree.c	/^    struct Node *rightChild;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+rightChild	huffmantree.c	/^	int rightChild;$/;"	m	struct:__anon2	file:
+rightChild	tree.c	/^    struct Node *rightChild;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+root	HuffmanCoder.c	/^int root;$/;"	v
+run	horse.c	/^void run(void)$/;"	f
+saveTree	HuffmanCoder.c	/^void saveTree()$/;"	f
+spiltBuffer	HuffmanCoder.c	/^int spiltBuffer()$/;"	f
+stack	b.c	/^node *stack[MAXLEN];$/;"	v
+stack	graph.c	/^node *stack[MAXLEN];$/;"	v
+stack	康艺杰_12/graph.c	/^node *stack[MAXLEN];$/;"	v
+stackNode	tree.c	/^}stackNode;$/;"	t	typeref:struct:StackNode	file:
+stackTop	horse.c	/^node *stackTop = NULL;$/;"	v
+sub	set.c	/^void sub(node *pHeadA, node *pHeadB)$/;"	f
+sub	triple.c	/^void sub()$/;"	f
+sum1	triple.c	/^int triple1[200],sum1;$/;"	v
+sum2	triple.c	/^int triple2[200],sum2;$/;"	v
+sum3	triple.c	/^int triple3[200],pos=1,sum3;$/;"	v
+test	666.c	/^void test(node *phead)$/;"	f
+top	b.c	/^int top;$/;"	v
+top	graph.c	/^int top;$/;"	v
+top	tree.c	/^stackNode *top;$/;"	v
+top	康艺杰_12/graph.c	/^int top;$/;"	v
+treeNode	code1.h	/^node treeNode[512];$/;"	v
+treeNode	tree.c	/^	node treeNode;$/;"	m	struct:StackNode	file:
+triple1	triple.c	/^int triple1[200],sum1;$/;"	v
+triple2	triple.c	/^int triple2[200],sum2;$/;"	v
+triple3	triple.c	/^int triple3[200],pos=1,sum3;$/;"	v
+weight	code1.h	/^    float weight;$/;"	m	struct:__anon1
+weight	huffmantree.c	/^	int weight;$/;"	m	struct:__anon2	file:
