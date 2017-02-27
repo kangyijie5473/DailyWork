@@ -34,6 +34,7 @@
 #define FALSE 1
 #define TRUE 0
 #define MAXLEN 256
+char local_file[MAXLEN] ;
 int spilt_URL(char url[], char host_addr[], char host_file[], int *port_number)
 {
     char *p = NULL;
@@ -48,12 +49,16 @@ int spilt_URL(char url[], char host_addr[], char host_file[], int *port_number)
     char *q;
     q = strchr(p,'/');
     strncpy(host_addr, p, q-p);
-    p = &(url[strlen(url) - 1]);
-    while( *p != '/'){
-        p--;
-    }
-    memcpy(host_file,p+1,strlen(p+1));
-    char *temp;
+   
+    p = &(url[strlen(url) - 1]);        //
+    while( *p != '/'){                  //
+        p--;                            //
+    }                                   //
+    memcpy(local_file,p+1,strlen(p+1)); //  生成本地文件名
+    
+    memcpy(host_file,q+1,strlen(q+1));  //  
+    //除了形如http://222.24.19.3:81/xiyoucs/index.asp 这样的端口
+    char *temp;                        
     temp = p = strstr(host_addr, ":");
     if(p){
         *port_number = atoi(p+1);
@@ -115,7 +120,7 @@ int main(int argc, char *argv[])
         }
         totalsend += key;
     }
-    if((fp = fopen(host_file, "a")) == 0){
+    if((fp = fopen(local_file, "a")) == 0){
         fprintf(stderr , "fopen error : %s\n",strerror(errno));
         return 1;
     }
