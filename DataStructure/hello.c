@@ -9,4 +9,10 @@
 int main(void)
 {
     printf("hello world\n");
+    printf("ello world\n");
+    printf("llo world\n");
+    printf("lo world\n");
+    printf("o world\n");
+    printf(" world\n");
+    printf("ld\n");
 }
