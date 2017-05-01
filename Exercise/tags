@@ -1,0 +1,200 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+FINISH	MPD/multPthreadDown.h	12;"	d
+ING	MPD/multPthreadDown.h	14;"	d
+LEN	MPD/server.c	20;"	d	file:
+MAXSIZE	MPD/multPthreadDown.h	10;"	d
+Message	MPD/multPthreadDown.h	/^}Message;$/;"	t	typeref:struct:__anon1
+NAME	MPD/multPthreadDown.h	13;"	d
+START	MPD/multPthreadDown.h	11;"	d
+Triangle	dehui9.cpp	/^class Triangle{$/;"	c	file:
+WRONG	MPD/multPthreadDown.h	15;"	d
+_GLOBAL__sub_I_main	dehui5.s	/^_GLOBAL__sub_I_main:$/;"	l
+_MULTPTHREADDOWN_H	MPD/multPthreadDown.h	9;"	d
+_Z41__static_initialization_and_destruction_0ii	dehui5.s	/^_Z41__static_initialization_and_destruction_0ii:$/;"	l
+_ZSt3absf	dehui5.s	/^_ZSt3absf:$/;"	l
+_ZSt4sqrtf	dehui5.s	/^_ZSt4sqrtf:$/;"	l
+_ZStL19piecewise_construct	dehui5.s	/^_ZStL19piecewise_construct:$/;"	l
+abc	dehui7.cpp	/^double abc(double a){$/;"	f
+abc	dehui7.cpp	/^int abc(int a){$/;"	f
+abc	dehui7.cpp	/^long abc(long a){$/;"	f
+ages	iter.py	/^ages = ['12', '23']$/;"	v
+area	dehui9.cpp	/^    double area(){$/;"	f	class:Triangle
+array	1.c	/^int array[1000][1000];$/;"	v
+aver	dehui4.cpp	/^    vector<int> aver;$/;"	v
+buffer	MPD/cJSON.c	/^typedef struct {char *buffer; int length; int offset; } printbuffer;$/;"	m	struct:__anon2	file:
+cJSON	MPD/cJSON.h	/^typedef struct cJSON {$/;"	s
+cJSON	MPD/cJSON.h	/^} cJSON;$/;"	t	typeref:struct:cJSON
+cJSON_AddBoolToObject	MPD/cJSON.h	136;"	d
+cJSON_AddFalseToObject	MPD/cJSON.h	135;"	d
+cJSON_AddItemReferenceToArray	MPD/cJSON.c	/^void	cJSON_AddItemReferenceToArray(cJSON *array, cJSON *item)						{cJSON_AddItemToArray(array,create_reference(item));}$/;"	f
+cJSON_AddItemReferenceToObject	MPD/cJSON.c	/^void	cJSON_AddItemReferenceToObject(cJSON *object,const char *string,cJSON *item)	{cJSON_AddItemToObject(object,string,create_reference(item));}$/;"	f
+cJSON_AddItemToArray	MPD/cJSON.c	/^void   cJSON_AddItemToArray(cJSON *array, cJSON *item)						{cJSON *c=array->child;if (!item) return; if (!c) {array->child=item;} else {while (c && c->next) c=c->next; suffix_object(c,item);}}$/;"	f
+cJSON_AddItemToObject	MPD/cJSON.c	/^void   cJSON_AddItemToObject(cJSON *object,const char *string,cJSON *item)	{if (!item) return; if (item->string) cJSON_free(item->string);item->string=cJSON_strdup(string);cJSON_AddItemToArray(object,item);}$/;"	f
+cJSON_AddItemToObjectCS	MPD/cJSON.c	/^void   cJSON_AddItemToObjectCS(cJSON *object,const char *string,cJSON *item)	{if (!item) return; if (!(item->type&cJSON_StringIsConst) && item->string) cJSON_free(item->string);item->string=(char*)string;item->type|=cJSON_StringIsConst;cJSON_AddItemToArray(object,item);}$/;"	f
+cJSON_AddNullToObject	MPD/cJSON.h	133;"	d
+cJSON_AddNumberToObject	MPD/cJSON.h	137;"	d
+cJSON_AddStringToObject	MPD/cJSON.h	138;"	d
+cJSON_AddTrueToObject	MPD/cJSON.h	134;"	d
+cJSON_Array	MPD/cJSON.h	37;"	d
+cJSON_CreateArray	MPD/cJSON.c	/^cJSON *cJSON_CreateArray(void)					{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_Array;return item;}$/;"	f
+cJSON_CreateBool	MPD/cJSON.c	/^cJSON *cJSON_CreateBool(int b)					{cJSON *item=cJSON_New_Item();if(item)item->type=b?cJSON_True:cJSON_False;return item;}$/;"	f
+cJSON_CreateDoubleArray	MPD/cJSON.c	/^cJSON *cJSON_CreateDoubleArray(const double *numbers,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	f
+cJSON_CreateFalse	MPD/cJSON.c	/^cJSON *cJSON_CreateFalse(void)					{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_False;return item;}$/;"	f
+cJSON_CreateFloatArray	MPD/cJSON.c	/^cJSON *cJSON_CreateFloatArray(const float *numbers,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	f
+cJSON_CreateIntArray	MPD/cJSON.c	/^cJSON *cJSON_CreateIntArray(const int *numbers,int count)		{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	f
+cJSON_CreateNull	MPD/cJSON.c	/^cJSON *cJSON_CreateNull(void)					{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_NULL;return item;}$/;"	f
+cJSON_CreateNumber	MPD/cJSON.c	/^cJSON *cJSON_CreateNumber(double num)			{cJSON *item=cJSON_New_Item();if(item){item->type=cJSON_Number;item->valuedouble=num;item->valueint=(int)num;}return item;}$/;"	f
+cJSON_CreateObject	MPD/cJSON.c	/^cJSON *cJSON_CreateObject(void)					{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_Object;return item;}$/;"	f
+cJSON_CreateString	MPD/cJSON.c	/^cJSON *cJSON_CreateString(const char *string)	{cJSON *item=cJSON_New_Item();if(item){item->type=cJSON_String;item->valuestring=cJSON_strdup(string);}return item;}$/;"	f
+cJSON_CreateStringArray	MPD/cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateString(strings[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	f
+cJSON_CreateTrue	MPD/cJSON.c	/^cJSON *cJSON_CreateTrue(void)					{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_True;return item;}$/;"	f
+cJSON_Delete	MPD/cJSON.c	/^void cJSON_Delete(cJSON *c)$/;"	f
+cJSON_DeleteItemFromArray	MPD/cJSON.c	/^void   cJSON_DeleteItemFromArray(cJSON *array,int which)			{cJSON_Delete(cJSON_DetachItemFromArray(array,which));}$/;"	f
+cJSON_DeleteItemFromObject	MPD/cJSON.c	/^void   cJSON_DeleteItemFromObject(cJSON *object,const char *string) {cJSON_Delete(cJSON_DetachItemFromObject(object,string));}$/;"	f
+cJSON_DetachItemFromArray	MPD/cJSON.c	/^cJSON *cJSON_DetachItemFromArray(cJSON *array,int which)			{cJSON *c=array->child;while (c && which>0) c=c->next,which--;if (!c) return 0;$/;"	f
+cJSON_DetachItemFromObject	MPD/cJSON.c	/^cJSON *cJSON_DetachItemFromObject(cJSON *object,const char *string) {int i=0;cJSON *c=object->child;while (c && cJSON_strcasecmp(c->string,string)) i++,c=c->next;if (c) return cJSON_DetachItemFromArray(object,i);return 0;}$/;"	f
+cJSON_Duplicate	MPD/cJSON.c	/^cJSON *cJSON_Duplicate(cJSON *item,int recurse)$/;"	f
+cJSON_False	MPD/cJSON.h	32;"	d
+cJSON_GetArrayItem	MPD/cJSON.c	/^cJSON *cJSON_GetArrayItem(cJSON *array,int item)				{cJSON *c=array->child;  while (c && item>0) item--,c=c->next; return c;}$/;"	f
+cJSON_GetArraySize	MPD/cJSON.c	/^int    cJSON_GetArraySize(cJSON *array)							{cJSON *c=array->child;int i=0;while(c)i++,c=c->next;return i;}$/;"	f
+cJSON_GetErrorPtr	MPD/cJSON.c	/^const char *cJSON_GetErrorPtr(void) {return ep;}$/;"	f
+cJSON_GetObjectItem	MPD/cJSON.c	/^cJSON *cJSON_GetObjectItem(cJSON *object,const char *string)	{cJSON *c=object->child; while (c && cJSON_strcasecmp(c->string,string)) c=c->next; return c;}$/;"	f
+cJSON_Hooks	MPD/cJSON.h	/^typedef struct cJSON_Hooks {$/;"	s
+cJSON_Hooks	MPD/cJSON.h	/^} cJSON_Hooks;$/;"	t	typeref:struct:cJSON_Hooks
+cJSON_InitHooks	MPD/cJSON.c	/^void cJSON_InitHooks(cJSON_Hooks* hooks)$/;"	f
+cJSON_IsReference	MPD/cJSON.h	40;"	d
+cJSON_Minify	MPD/cJSON.c	/^void cJSON_Minify(char *json)$/;"	f
+cJSON_NULL	MPD/cJSON.h	34;"	d
+cJSON_New_Item	MPD/cJSON.c	/^static cJSON *cJSON_New_Item(void)$/;"	f	file:
+cJSON_Number	MPD/cJSON.h	35;"	d
+cJSON_Object	MPD/cJSON.h	38;"	d
+cJSON_Parse	MPD/cJSON.c	/^cJSON *cJSON_Parse(const char *value) {return cJSON_ParseWithOpts(value,0,0);}$/;"	f
+cJSON_ParseWithOpts	MPD/cJSON.c	/^cJSON *cJSON_ParseWithOpts(const char *value,const char **return_parse_end,int require_null_terminated)$/;"	f
+cJSON_Print	MPD/cJSON.c	/^char *cJSON_Print(cJSON *item)				{return print_value(item,0,1,0);}$/;"	f
+cJSON_PrintBuffered	MPD/cJSON.c	/^char *cJSON_PrintBuffered(cJSON *item,int prebuffer,int fmt)$/;"	f
+cJSON_PrintUnformatted	MPD/cJSON.c	/^char *cJSON_PrintUnformatted(cJSON *item)	{return print_value(item,0,0,0);}$/;"	f
+cJSON_ReplaceItemInArray	MPD/cJSON.c	/^void   cJSON_ReplaceItemInArray(cJSON *array,int which,cJSON *newitem)		{cJSON *c=array->child;while (c && which>0) c=c->next,which--;if (!c) return;$/;"	f
+cJSON_ReplaceItemInObject	MPD/cJSON.c	/^void   cJSON_ReplaceItemInObject(cJSON *object,const char *string,cJSON *newitem){int i=0;cJSON *c=object->child;while(c && cJSON_strcasecmp(c->string,string))i++,c=c->next;if(c){newitem->string=cJSON_strdup(string);cJSON_ReplaceItemInArray(object,i,newitem);}}$/;"	f
+cJSON_SetIntValue	MPD/cJSON.h	141;"	d
+cJSON_String	MPD/cJSON.h	36;"	d
+cJSON_StringIsConst	MPD/cJSON.h	41;"	d
+cJSON_True	MPD/cJSON.h	33;"	d
+cJSON__h	MPD/cJSON.h	24;"	d
+cJSON_free	MPD/cJSON.c	/^static void (*cJSON_free)(void *ptr) = free;$/;"	v	file:
+cJSON_malloc	MPD/cJSON.c	/^static void *(*cJSON_malloc)(size_t sz) = malloc;$/;"	v	file:
+cJSON_strcasecmp	MPD/cJSON.c	/^static int cJSON_strcasecmp(const char *s1,const char *s2)$/;"	f	file:
+cJSON_strdup	MPD/cJSON.c	/^static char* cJSON_strdup(const char* str)$/;"	f	file:
+cal_mean	simple.py	/^def cal_mean(readings):$/;"	f
+cal_variance	simple.py	/^def cal_variance(readings):$/;"	f
+child	MPD/cJSON.h	/^	struct cJSON *child;		\/* An array or object item will have a child pointer pointing to a chain of the items in the array\/object. *\/$/;"	m	struct:cJSON	typeref:struct:cJSON::cJSON
+connect_fd	MPD/server.c	/^int socket_fd, connect_fd;$/;"	v
+create_reference	MPD/cJSON.c	/^static cJSON *create_reference(cJSON *item) {cJSON *ref=cJSON_New_Item();if (!ref) return 0;memcpy(ref,item,sizeof(cJSON));ref->string=0;ref->type|=cJSON_IsReference;ref->next=ref->prev=0;return ref;}$/;"	f	file:
+day	1.py	/^day = raw_input("day: ")$/;"	v
+day_number	1.py	/^day_number = int(day)$/;"	v
+download	MPD/server.c	/^void download(int connect_fd)$/;"	f
+ends	1.py	/^ends = ['st', 'nd', 'rd'] + 17 *['th'] + ['st', 'nd', 'rd'] + 7 * ['st']$/;"	v
+ensure	MPD/cJSON.c	/^static char* ensure(printbuffer *p,int needed)$/;"	f	file:
+ep	MPD/cJSON.c	/^static const char *ep;$/;"	v	file:
+escapable	MPD/cJSON.c	/^static int escapable[256]={	1,1,1,1,	1,1,1,1,	1,1,1,1,	1,1,1,1,	1,1,1,1,	1,1,1,1,	1,1,1,1,	1,1,1,1,$/;"	v	file:
+f	dehui8.cpp	/^int f(int a[], int c, int &max,int &min){$/;"	f
+fd	MPD/client.c	/^int fd;$/;"	v
+firstByteMark	MPD/cJSON.c	/^static const unsigned char firstByteMark[7] = { 0x00, 0x00, 0xC0, 0xE0, 0xF0, 0xF8, 0xFC };$/;"	v	file:
+flag	MPD/multPthreadDown.h	/^    unsigned int flag;$/;"	m	struct:__anon1
+format	format.py	/^format = '%-*s%*s'$/;"	v
+free_fn	MPD/cJSON.h	/^      void (*free_fn)(void *ptr);$/;"	m	struct:cJSON_Hooks
+fun	test.cpp	/^int fun(char a = 'a')$/;"	f
+fun	test.cpp	/^int fun(int a){$/;"	f
+fun1	1.c	/^void fun1(int x, int y)$/;"	f
+fun2	1.c	/^void fun2(int x, int y)$/;"	f
+fun3	1.c	/^void fun3(int x, int y)$/;"	f
+fun4	1.c	/^void fun4(int x, int y)$/;"	f
+header_format	format.py	/^header_format = '%s%s'$/;"	v
+height	dehui9.cpp	/^    double height;$/;"	m	class:Triangle	file:
+index	strtihuan.py	/^index = 0$/;"	v
+ist	2.py	/^ist = [1,2,3]$/;"	v
+item_width	format.py	/^item_width = width - price_width$/;"	v
+key	MPD/client.c	/^int key;$/;"	v
+key	MPD/server.c	/^int key;$/;"	v
+length	MPD/cJSON.c	/^typedef struct {char *buffer; int length; int offset; } printbuffer;$/;"	m	struct:__anon2	file:
+line	dehui4.cpp	/^    vector<int> line;$/;"	v
+m	1.c	/^int n,m,q,x,y;$/;"	v
+main	1.c	/^int main(void)$/;"	f
+main	MPD/client.c	/^int main(void)$/;"	f
+main	MPD/server.c	/^int main(void)$/;"	f
+main	One-TwoSum.c	/^int main(void)$/;"	f
+main	bug.cpp	/^int main(void)$/;"	f
+main	dehui1.cpp	/^int main(void)$/;"	f
+main	dehui10.cpp	/^int main(void)$/;"	f
+main	dehui2.cpp	/^int main(void)$/;"	f
+main	dehui3.cpp	/^int main(void)$/;"	f
+main	dehui4.cpp	/^int main(void)$/;"	f
+main	dehui5.cpp	/^int main(void)$/;"	f
+main	dehui5.s	/^main:$/;"	l
+main	dehui6.cpp	/^int main(void)$/;"	f
+main	dehui7.cpp	/^int main(void)$/;"	f
+main	dehui8.cpp	/^int main( )$/;"	f
+main	printMyself.c	/^int main(){printf(s,10,34,s,34,10,10);} $/;"	f
+main	printN.c	/^int main(void){$/;"	f
+main	printN.cpp	/^int main(void)$/;"	f
+main	test.cpp	/^int main(void)$/;"	f
+main	testlink.c	/^int main(void)$/;"	f
+malloc_fn	MPD/cJSON.h	/^      void *(*malloc_fn)(size_t sz);$/;"	m	struct:cJSON_Hooks
+month	1.py	/^month = raw_input("month: ")$/;"	v
+month_name	1.py	/^month_name = months[month_number -1]$/;"	v
+month_number	1.py	/^month_number = int(month)$/;"	v
+months	1.py	/^months = [$/;"	v
+myclass	dehui10.cpp	/^    myclass() { cout << 'a'; }$/;"	f	class:myclass
+myclass	dehui10.cpp	/^class myclass{$/;"	c	file:
+n	1.c	/^int n,m,q,x,y;$/;"	v
+n	printN.py	/^n = int(raw_input());$/;"	v
+name	hello.py	/^name = raw_input("name ")$/;"	v
+names	iter.py	/^names = ['kang', 'wang', 'li']$/;"	v
+next	MPD/cJSON.h	/^	struct cJSON *next,*prev;	\/* next\/prev allow you to walk array\/object chains. Alternatively, use GetArraySize\/GetArrayItem\/GetObjectItem *\/$/;"	m	struct:cJSON	typeref:struct:cJSON::cJSON
+offset	MPD/cJSON.c	/^typedef struct {char *buffer; int length; int offset; } printbuffer;$/;"	m	struct:__anon2	file:
+ordinal	1.py	/^ordinal = day + ends[day_number -1]$/;"	v
+parse_array	MPD/cJSON.c	/^static const char *parse_array(cJSON *item,const char *value)$/;"	f	file:
+parse_hex4	MPD/cJSON.c	/^static unsigned parse_hex4(const char *str)$/;"	f	file:
+parse_number	MPD/cJSON.c	/^static const char *parse_number(cJSON *item,const char *num)$/;"	f	file:
+parse_object	MPD/cJSON.c	/^static const char *parse_object(cJSON *item,const char *value)$/;"	f	file:
+parse_string	MPD/cJSON.c	/^static const char *parse_string(cJSON *item,const char *str)$/;"	f	file:
+parse_value	MPD/cJSON.c	/^static const char *parse_value(cJSON *item,const char *value)$/;"	f	file:
+pow	simple.py	/^from math import pow$/;"	i
+pow2gt	MPD/cJSON.c	/^static int pow2gt (int x)	{	--x;	x|=x>>1;	x|=x>>2;	x|=x>>4;	x|=x>>8;	x|=x>>16;	return x+1;	}$/;"	f	file:
+prev	MPD/cJSON.h	/^	struct cJSON *next,*prev;	\/* next\/prev allow you to walk array\/object chains. Alternatively, use GetArraySize\/GetArrayItem\/GetObjectItem *\/$/;"	m	struct:cJSON	typeref:struct:cJSON::
+price_width	format.py	/^price_width = 10$/;"	v
+print_array	MPD/cJSON.c	/^static char *print_array(cJSON *item,int depth,int fmt,printbuffer *p)$/;"	f	file:
+print_number	MPD/cJSON.c	/^static char *print_number(cJSON *item,printbuffer *p)$/;"	f	file:
+print_object	MPD/cJSON.c	/^static char *print_object(cJSON *item,int depth,int fmt,printbuffer *p)$/;"	f	file:
+print_string	MPD/cJSON.c	/^static char *print_string(cJSON *item,printbuffer *p)	{return print_string_ptr(item->valuestring,p);}$/;"	f	file:
+print_string_ptr	MPD/cJSON.c	/^static char *print_string_ptr(const char *str,printbuffer *p)$/;"	f	file:
+print_value	MPD/cJSON.c	/^static char *print_value(cJSON *item,int depth,int fmt,printbuffer *p)$/;"	f	file:
+printbuffer	MPD/cJSON.c	/^typedef struct {char *buffer; int length; int offset; } printbuffer;$/;"	t	typeref:struct:__anon2	file:
+pthread_number	MPD/multPthreadDown.h	/^    char pthread_number;$/;"	m	struct:__anon1
+q	1.c	/^int n,m,q,x,y;$/;"	v
+s	printMyself.c	/^char*s="#include <stdio.h>%cchar*s=%c%s%c;%cint main(){printf(s,10,34,s,34,10,10);}%c";  $/;"	v
+serverAddr	MPD/client.c	/^struct sockaddr_in serverAddr;$/;"	v	typeref:struct:sockaddr_in
+size	MPD/multPthreadDown.h	/^    unsigned int size;$/;"	m	struct:__anon1
+skip	MPD/cJSON.c	/^static const char *skip(const char *in) {while (in && *in && (unsigned char)*in<=32) in++; return in;}$/;"	f	file:
+socket_fd	MPD/server.c	/^int socket_fd, connect_fd;$/;"	v
+start1	MPD/server.c	/^void *start1(void *fp)$/;"	f
+string	MPD/cJSON.h	/^	char *string;				\/* The item's name string, if this item is the child of, or is in the list of subitems of an object. *\/$/;"	m	struct:cJSON
+string	MPD/multPthreadDown.h	/^    char string[MAXSIZE];$/;"	m	struct:__anon1
+strings	strtihuan.py	/^strings = ['hello','hellowo', 'asd','bbbh']$/;"	v
+suffix_object	MPD/cJSON.c	/^static void suffix_object(cJSON *prev,cJSON *item) {prev->next=item;item->prev=prev;}$/;"	f	file:
+temp	1.c	/^int temp;$/;"	v
+twoSum	One-TwoSum.c	/^int* twoSum(int* nums, int numsSize, int target) {$/;"	f
+type	MPD/cJSON.h	/^	int type;					\/* The type of the item, as above. *\/$/;"	m	struct:cJSON
+update	MPD/cJSON.c	/^static int update(printbuffer *p)$/;"	f	file:
+valuedouble	MPD/cJSON.h	/^	double valuedouble;			\/* The item's number, if type==cJSON_Number *\/$/;"	m	struct:cJSON
+valueint	MPD/cJSON.h	/^	int valueint;				\/* The item's number, if type==cJSON_Number *\/$/;"	m	struct:cJSON
+valuestring	MPD/cJSON.h	/^	char *valuestring;			\/* The item's string, if type==cJSON_String *\/$/;"	m	struct:cJSON
+width	dehui9.cpp	/^    double width;$/;"	m	class:Triangle	file:
+width	format.py	/^width = input('please in width:')$/;"	v
+x	1.c	/^int n,m,q,x,y;$/;"	v
+y	1.c	/^int n,m,q,x,y;$/;"	v
+year	1.py	/^year = raw_input('year: ')$/;"	v
