@@ -10,7 +10,7 @@
 
 
 /*
- * bug: 杀死进程后回收内存存在问题
+ * bug: display_menu()显示问题
  *
  */
 #include <stdio.h>
@@ -80,7 +80,7 @@ int set_mem_size()
 {
     int size;
     if(flag != 0){
-        printf("cannot set memory size again");
+        printf("cannot set memory size again\n");
         return 0;
     }
     printf("total memory size =");
@@ -138,8 +138,8 @@ void set_algorithm()
 
 void rearrange_FF()
 {
-    if(free_block->next == NULL||
-       free_block == NULL)
+    if(free_block == NULL||
+       free_block->next == NULL)
         return;
 
     empty_head_node.next = free_block;
@@ -156,14 +156,13 @@ void rearrange_FF()
         }
         f = p->next;
     }
-
-    
+    free_block = empty_head_node.next;
 
 }
 void rearrange_BF()
 {
-    if(free_block->next == NULL||
-       free_block == NULL)
+    if(free_block == NULL||
+       free_block->next == NULL)
         return;
     empty_head_node.next = free_block;
     free_block_type *p,*x,*y,*f = NULL;
@@ -179,12 +178,13 @@ void rearrange_BF()
         }
         f = p->next;
     }
+    free_block = empty_head_node.next;
 
 }
 void rearrange_WF()
 {
-    if(free_block->next == NULL||
-       free_block == NULL)
+    if(free_block == NULL||
+       free_block->next == NULL)
         return;
 
     empty_head_node.next = free_block;
@@ -202,6 +202,7 @@ void rearrange_WF()
         }
         f = p->next;
     }
+    free_block = empty_head_node.next;
 
 }
 void rearrange(int algorithm)
@@ -222,8 +223,6 @@ int  display_mem_usage()
 {
     free_block_type *fbt =  free_block;
     allocated_block *ab = alloc_phead;
-    if(fbt == NULL)
-        return -1;
     printf("-----------------------------------------------------------------------\n");
     printf("\n Free memory:\n");
     printf("%20s %20s \n","    start_addr","    size");
@@ -231,6 +230,7 @@ int  display_mem_usage()
         printf("%20d %20d\n",fbt->start_addr, fbt->size);
         fbt = fbt->next;
     }
+
     printf("\n Used memory:\n");
     printf("%10s %20s %10s %10s\n","pid","process_name","start_addr","size");
     while(ab != NULL){
@@ -240,7 +240,44 @@ int  display_mem_usage()
     printf("-----------------------------------------------------------------------\n");
     return 0;
 }
+int isEnough(int requset_size)
+{
+    int free_block_sum = 0;
+    free_block_type *fbt = free_block;
+    while(fbt){
+        free_block_sum += fbt->size;
+        fbt = fbt->next;
+    }
+    if(free_block_sum >= requset_size)
+        return 1;
+    else
+        return 0;
+}
+void make_memory_tight()
+{
+    free_block_type *fbt,*pre;
+    int sum = 0,start_addr;
+    allocated_block *q = alloc_phead->next,*p = alloc_phead;
+    p->start_addr = DEFAULT_MEM_START;
+    while(q){
+        q->start_addr = p->start_addr + p->size;
+        q = q->next;
+        p = p->next;
+    }
+    start_addr = p->start_addr + p->size;
 
+    pre = free_block;
+    fbt = pre->next;
+    while(fbt){
+        sum += pre->size;
+        free(pre);
+        pre = fbt;
+        fbt = fbt->next;
+    }
+    pre->size += sum;
+    pre->start_addr = start_addr;
+    free_block = pre;
+}
 int allocate_mem(allocated_block *ab)
 {
     free_block_type *fbt, *pre;
@@ -258,9 +295,13 @@ int allocate_mem(allocated_block *ab)
         /*找到 剩余小，直接分配整个*/
         }else if(fbt->size >= requset_size && 
                  fbt->size - requset_size < MIN_SLICE){
-            while(pre->next != fbt) 
+            if(pre == fbt){
+                free_block = pre->next;
+            }else{
+                while(pre->next != fbt) 
                 pre = pre->next;
-            pre->next = fbt->next;
+                pre->next = fbt->next;
+            }
             ab->start_addr = fbt->start_addr;
             ab->size  = fbt->size;
             free(fbt);
@@ -270,28 +311,40 @@ int allocate_mem(allocated_block *ab)
             fbt = fbt->next;
         }
     }
-    fbt = free_block->next->next;
-    pre = free_block->next;
-
-    /*TO DO :利用内存紧缩再次查找*/
-    /*
-    while(fbt){
-        if(fbt->size + pre->size == requset_size){
-
-        }
-        if(fbt->size + pre->size > requset_size){
-            pre->size = fbt->size + pre->size - requset_size;
-            fbt->size = 0;
+    if(isEnough(requset_size)){
+        make_memory_tight();
+        fbt = pre = free_block;
+        while(fbt){
+        /*找到 并且剩余大*/
+        if(fbt->size > requset_size && 
+           fbt->size - requset_size > MIN_SLICE){
+            fbt->size -= requset_size;
+            ab->start_addr = fbt->start_addr;
+            fbt->start_addr += requset_size;
             rearrange(ma_algorithm);
             return 1;
-        }else{
+        /*找到 剩余小，直接分配整个*/
+        }else if(fbt->size >= requset_size && 
+                 fbt->size - requset_size < MIN_SLICE){
+            if(pre == fbt){
+                free_block = pre->next;
+            }else{
+                while(pre->next != fbt) 
+                pre = pre->next;
+                pre->next = fbt->next;
+            }
+            ab->start_addr = fbt->start_addr;
+            ab->size  = fbt->size;
+            free(fbt);
+            rearrange(ma_algorithm);
+            return 1;
+        }else {
             fbt = fbt->next;
-            pre = pre->next;
         }
-    }
-    */
-    /*分配给进程内存失败     */  
-    return -1;
+        }
+    }else
+        return -1;//分配给进程内存失败  
+
 }
 allocated_block *find_process(int pid)
 {
@@ -336,12 +389,7 @@ int free_mem(allocated_block *ab)
     fbt->next = NULL;
 
     pre = free_block;
-    while(pre){
-        printf("***%d\n",pre->start_addr);
-        pre = pre->next;
-        
-    }
-
+   
     sort_list_by_addr();
     merge_free_block();
     rearrange(ma_algorithm);
@@ -398,6 +446,7 @@ void do_exit()
     free(p);
 
     free_block_type *q = free_block;
+    if(!free_block) return;
     free_block = free_block->next;
     while(free_block){
         free(q);
@@ -408,8 +457,6 @@ void do_exit()
 }
 void display_menu()
 {
-    //system("clear");
-    printf("\n\n\n\n\n");
     printf("1-Set memory size (default = %d)\n",DEFAULT_MEM_SIZE);
     printf("2-Select memory alloction algorithm\n");
     printf("3-Create new process\n");
@@ -444,7 +491,6 @@ int main(void)
             flag = 1;
             break;
         case '5':
-            puts("case 5\n");
             display_mem_usage(); // 显示内存分配情况
             flag = 1;
             break ;
