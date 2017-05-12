@@ -64,15 +64,27 @@ void print_list(node *phead)
         phead = phead->next;
     }
 }
-
+node *top;
+void pop(node *head)
+{
+    head->next = top->next;
+    free(top);
+    top = head->next;
+}
+void push(node *head)
+{
+    
+}
 int main(void)
 {
     node *head;
     head = (node *)malloc(sizeof(node));
     head->next = NULL;
-    list_init_tail(head);
+    list_init_head(head);
     print_list(head->next);
-    list_reverse(head);
+    top = head->next;
+    pop(head);
     print_list(head->next);
+    //list_reverse(head);
 
 }
