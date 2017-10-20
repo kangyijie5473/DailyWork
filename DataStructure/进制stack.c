@@ -51,8 +51,8 @@ int main(void)
         if(a == 0){
             printf("0\n");
             continue;
-        while(a){
         }
+        while(a){
             if(a%2 == 0)
                 push('0',stack);
             else
