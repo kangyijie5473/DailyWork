@@ -184,11 +184,12 @@ int main()
                     allocation[now_running_process][i] -= request[now_running_process][i];
                     need[now_running_process][i] += request[now_running_process][i];                     
                 }
-                process[now_running_process].state = SLEEP;
                 cout << "now is not security" << endl;
             } else{
                 cout << "now is security" << endl;
-            }             
+            }
+            process[now_running_process].state = SLEEP;
+             
         }
     }
 
